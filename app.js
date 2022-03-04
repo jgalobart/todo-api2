@@ -18,6 +18,12 @@ app.get('/lists', (req,res,next) => {
     })
 })
 
+app.get('/contacts', (req,res,next) => {
+    res.json([
+        {'fname':'Jordi','lname':'Galobart'},
+    ])
+})
+
 app.listen(port, () => {
     console.log('Server listening on port '+port)
 })
