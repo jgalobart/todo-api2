@@ -6,6 +6,10 @@ const express = require('express')
 const app = express()
 const port = process.env.PORT || 8000
 
+app.get('/', (req,res) => {
+    res.send('hola!')
+})
+
 app.get('/lists', (req,res) => {
     res.json({
         'msg':'Hello World!'
