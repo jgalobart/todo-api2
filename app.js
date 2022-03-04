@@ -12,7 +12,9 @@ app.get('/', (req,res,next) => {
 
 app.get('/lists', (req,res,next) => {
     res.json({
-        'msg':'Hello World!'
+        'msg':'Hello World!',
+        'env':process.env.MSG || 'noexiste',
+        'port':port,
     })
 })
 
