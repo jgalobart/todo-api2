@@ -7,8 +7,7 @@ const app = express()
 const port = process.env.PORT || 8000
 
 var cors = require('cors')
-app.options('*', cors())
-app.use(cors())
+app.use(cors({ origin: "*" }));
 
 app.get('/', (req,res,next) => {
     res.send('hola!')
